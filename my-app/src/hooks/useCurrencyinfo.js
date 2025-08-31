@@ -6,9 +6,12 @@ function useCurrencyInfo(currency){
         fetch( `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
         .then((res)=> res.json())
         .then((res) => setdata(res[currency]))
-        console.log(data);
-    }, [currency, data])
-    console.log(data);
+        
+    }, [currency]);
+    
+    useEffect(() => {
+    console.log("Updated currency data:", data);
+  }, [data]);
     return data
 }
 export default useCurrencyInfo;
