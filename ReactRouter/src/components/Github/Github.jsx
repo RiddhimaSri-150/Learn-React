@@ -27,7 +27,7 @@ export default Github
 // }
 // eslint-disable-next-line react-refresh/only-export-components
 export const githubInfoLoader = async () => {
-  const response = await fetch('https://api.github.com/users/hiteshchoudhary')
+  const response = await fetch('https://api.github.com/users/RiddhimaSri-150')
 
   if (!response.ok) {
     throw new Response("Failed to fetch GitHub user", { status: response.status })
